@@ -1,0 +1,11 @@
+# すべてのサブプロジェクトの本番依存関係をここに含める
+-r monorepo/requirements.txt
+
+# 開発ツール
+pytest
+mypy
+ruff
+types-PyYAML
+
+# 自身のパッケージを編集可能モードでインストール (これが -e の役割)
+-e ./monorepo

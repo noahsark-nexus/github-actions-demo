@@ -1,0 +1,49 @@
+[tool.ruff]
+# Ruffのトップレベル設定: 除外ディレクトリと行の長さ
+exclude = [
+    ".git",
+    "__pycache__",
+    "venv",
+    "docs",
+]
+# 行の最大文字数 (Blackのデフォルト 88 と合わせる)
+line-length = 88
+
+
+[tool.ruff.lint]
+# ★ 警告解決: リンティングルールは [tool.ruff.lint] セクションへ移動
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort (インポートのソート)
+    "B",    # bugbear (バグの可能性が高い構造)
+    "C4",   # comprehensions (内包表記関連の改善)
+    "SIM",  # simplification (コードの単純化)
+    "UP",   # pyupgrade (モダンなPythonの書き方へのアップグレード)
+]
+
+
+[tool.ruff.format]
+# Ruff Format の設定
+docstring-code-format = true
+
+
+[tool.mypy]
+# mypyのチェック対象ディレクトリ
+files = [
+    "monorepo",
+    "tests",
+]
+# 厳格モードを有効にする (小文字の 'true' に修正)
+strict = true
+
+# ★ 修正: オプション名をアンダースコア (_) に戻し、値を小文字にする
+# 型ヒントのない関数定義を許可しない
+disallow_untyped_defs = true
+# Any型が使われた時の挙動に関する設定
+disallow_any_unimported = true
+
+# ★ 修正: オプション名をアンダースコア (_) に戻し、値を小文字にする
+# 外部ライブラリの型チェックは基本的にスキップ
+ignore_missing_imports = true

@@ -1,0 +1,33 @@
+memos/
+
+
+# Byte-compiled / temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environments
+venv/
+env/
+.venv/
+
+# Python package/distribution files
+.eggs/
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE and Editor files 
+.idea/
+.vscode/
+*~
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation build files 
+docs/_build/
