@@ -40,8 +40,9 @@ Conda環境でPoetryを使う場合、Poetryが独自の仮想環境を作らな
 | `poetry init` | `pyproject.toml` ファイルを作成する。プロジェクト名、バージョン、ライセンスなどを対話形式で設定する。 |
 | `poetry show` | インストールされているパッケージとバージョンをすべて表示 |
 | `poetry add <パッケージ名>` | 実行時に必要なコアなライブラリ（例: `numpy`, `pandas`）を追加する。 |
-| `poetry remove <パッケージ名>` | ライブラリを削除 |
 | `poetry add pytest mypy ruff --group dev` | `pytest`, `mypy`, `ruff` などの開発・テスト用ツールを **`dev` グループ**として追加する。 |
+| `poetry add <パッケージ名> -C <ディレクトリ名>` | **`-C`** オプションで、追加対象のサブプロジェクトの `pyproject.toml` を指定します。 |
+| `poetry remove <パッケージ名>` | ライブラリを削除 |
 | `poetry update` | 全てのパッケージを更新 |
 | `poetry lock` | `poetry install` したら ‘pyproject.toml changed’ の警告が出る」場合、 `pyproject.toml` に合致させた最新の `poetry.lock` を生成または更新する。 |
 | `poetry install` | `poetry.lock` に基づいて、全依存関係（`dev` 含む）をインストールする。 |
