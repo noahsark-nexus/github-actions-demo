@@ -10,7 +10,7 @@
 | `conda create -n myenv python=3.10 -y` | `myenv`という名前で、Python 3.10の環境を作成する |
 | `conda activate myenv` | 作成した環境に入る |
 | `conda deactivate` | 現在の環境から出る| 
-| `conda env remove -n myenv` | 環境を削除する |
+| `conda env remove -n myenv -y` | 環境を削除する |
 | `conda create -n newenv --clone myenv` | 環境を複製する |
 
 ---
@@ -46,8 +46,8 @@ Conda環境でPoetryを使う場合、Poetryが独自の仮想環境を作らな
 | `poetry update` | 全てのパッケージを更新 |
 | `poetry lock` | `poetry install` したら ‘pyproject.toml changed’ の警告が出る」場合、 `pyproject.toml` に合致させた最新の `poetry.lock` を生成または更新する。 |
 | `poetry install` | `poetry.lock` に基づいて、全依存関係（`dev` 含む）をインストールする。 |
-`poetry install --without dev` | 実行時依存関係のみをインストールする（CIでのデプロイステップなどで使う）。 |
-`poetry run python main.py` | コマンドの前に `poetry run` を付けて、Poetryが管理する環境で実行する。 |
+| `poetry install --without dev` | 実行時依存関係のみをインストールする（CIでのデプロイステップなどで使う）。 |
+| `poetry run python main.py` | コマンドの前に `poetry run` を付けて、Poetryが管理する環境で実行する。 |
 
 ### ポリレポ開発でのパッケージ管理
 
