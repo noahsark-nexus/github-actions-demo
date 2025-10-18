@@ -10,11 +10,9 @@ def get_demo() -> Any:
     # 現在はAnyが戻り値なのでAnyとします。
     return demo.get_yaml()
 
-
 def main() -> None:
     """エントリポイント関数"""
     print(f"YAML content: {get_demo()}")
-
 
 if __name__ == "__main__":
     main()

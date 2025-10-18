@@ -7,7 +7,6 @@ import yaml
 # yamlの戻り値をAnyとして扱う
 YAML_RETURN_TYPE = dict[str, Any]
 
-
 # 戻り値の型ヒントを追加: yaml.safe_loadの戻り値はAnyを返す辞書構造を想定
 def load_yaml(filename: str) -> YAML_RETURN_TYPE:
     """
@@ -15,11 +14,9 @@ def load_yaml(filename: str) -> YAML_RETURN_TYPE:
     """
     # resources.files() は Python 3.9+ で推奨
     config_path = resources.files("monorepo") / "data" / filename
-    config_path = resources.files("monorepo") / "data" / filename
     with config_path.open("r", encoding="utf-8") as f:  # <- ここを修正
         result = yaml.safe_load(f)
         return cast(YAML_RETURN_TYPE, result)
-
 
 # 戻り値の型ヒントを追加
 def get_yaml() -> Any:

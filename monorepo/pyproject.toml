@@ -1,11 +1,10 @@
-[build-system]
-requires = ["setuptools>=61.0.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "monorepo"
+# monorepo/pyproject.toml
+[tool.poetry]
+name = "monorepo" # パッケージ名
 version = "0.1.0"
+# 「monorepo」パッケージをインクルードし、そのソースは「src」ディレクトリ内にあることを指定
+packages = [{ include = "monorepo", from = "src" }] 
 
-[tool.setuptools.packages.find]
-# pyproject.tomlから見て、src/ がソースコードのルート
-where = ["src"] # srcディレクトリの中をパッケージとして探す
+[tool.poetry.dependencies]
+python = ">=3.10"
+pyyaml = "^6.0.3"
