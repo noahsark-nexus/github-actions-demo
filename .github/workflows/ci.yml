@@ -39,9 +39,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        if [ ! -f poetry.lock ]; then
-          poetry lock
-        fi
+        poetry lock
         poetry install
 
     # --- Lint & Format check ---

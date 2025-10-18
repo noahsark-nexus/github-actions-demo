@@ -26,7 +26,7 @@ Conda環境でPoetryを使う場合、Poetryが独自の仮想環境を作らな
 
 | コマンド | 解説 |
 | ---- | ---- |
-`conda activate <あなたの環境名>` | 使用するConda環境をアクティベートする。 |
+| `conda activate <あなたの環境名>` | 使用するConda環境をアクティベートする。 |
 | `pip install poetry` | そのConda環境の中にPoetryをインストールする。 |
 | `poetry config virtualenvs.create false` | Poetryが独自の仮想環境を作る機能を無効化し、アクティブなConda環境を使うように指示する。 |
 | `poetry config --list` | 全てのグローバル設定を表示 |
