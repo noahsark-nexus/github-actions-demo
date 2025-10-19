@@ -53,5 +53,4 @@ jobs:
 
     # --- Tests ---
     - name: Run pytest
-      # resources.files()の動作を確実にするため、モジュール実行に戻す
-      run: poetry run python -m pytest
+      run: poetry run pytest

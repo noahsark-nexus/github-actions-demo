@@ -1,4 +1,4 @@
-from importlib import resources
+from pathlib import Path
 from typing import Any, cast
 
 import yaml
@@ -12,8 +12,8 @@ def load_yaml(filename: str) -> YAML_RETURN_TYPE:
     """
     データディレクトリから指定されたYAMLファイルを読み込む。
     """
-    # resources.files() は Python 3.9+ で推奨
-    config_path = resources.files("monorepo") / "data" / filename
+    project_root = Path(__file__).parent.parent.parent.parent
+    config_path = project_root / "data" / filename
     with config_path.open("r", encoding="utf-8") as f:  # <- ここを修正
         result = yaml.safe_load(f)
         return cast(YAML_RETURN_TYPE, result)
