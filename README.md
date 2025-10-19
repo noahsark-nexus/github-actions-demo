@@ -6,7 +6,7 @@
 
 | コマンド | 解説 |
 | ---- | ---- |
-| `conda env list` | 環境の一覧を表示す |
+| `conda env list` | 環境の一覧を表示する |
 | `conda create -n myenv python=3.10 -y` | `myenv`という名前で、Python 3.10の環境を作成する |
 | `conda activate myenv` | 作成した環境に入る |
 | `conda deactivate` | 現在の環境から出る| 
