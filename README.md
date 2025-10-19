@@ -143,7 +143,7 @@ poetry show # packages = [{ include = "demo", from = "src" }] が追加されて
 poetry run python -m monorepo.main
 poetry run ruff check . 
 poetry run mypy .
-poetry run python -m pytest
+poetry run pytest
 ```
 
 ---
