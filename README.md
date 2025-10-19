@@ -188,5 +188,5 @@ pytestは「ロジックのテスト」を行います。
 
 | コマンド | 解説 |
 | ---- | ---- |
-| `poetry run pytest .` | コード全体をスキャンし、テストを実行します |
+| `poetry run pytest` | コード全体をスキャンし、テストを実行します |
 | `poetry run pytest path/to/file.py` | 特定のファイルのテストだけを実行します |
